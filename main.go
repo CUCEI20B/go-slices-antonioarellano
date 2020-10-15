@@ -1,7 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func main()  {
-	fmt.Println("Hola Mundo!") // eliminar esta línea
+func main() {
+	var n, t int
+	fmt.Scanln(&n)
+	s := make([]int, n)
+	for i := 0; i < n; i++ {
+		fmt.Scan(&s[i])
+		t += s[i]
+	}
+	fmt.Println(t)
 }
